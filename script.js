@@ -8,21 +8,35 @@ const count = 10;
 const apiKey = "e7-3iVN7qSi-gq-7otpn2voBYqzT7kA3ydhWW_AxUZQ";
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}
 `;
-
+// Helper Function to set attributes on DOM elements
+function setAttributes(element, attributes) {
+  for (const key in attributes) {
+    element.setAttribute(key, attributes[key]);
+  }
+}
 // Create Elements for links and photos ,Add to the DOM
 function displayPhotos() {
   // run function for each object in photosArray
   photosArray.forEach((photo) => {
     // create <a> to link to Unsplash
     const item = document.createElement("a");
-    item.setAttribute("href", photo.links.html);
-    item.setAttribute("target", "_blank");
+    // item.setAttribute("href", photo.links.html);
+    // item.setAttribute("target", "_blank");
+    setAttributes(item, {
+      href: photo.links.html,
+      target: "_blank",
+    });
     // create <img> for photo
     const img = document.createElement("img");
-    img.setAttribute("src", photo.urls.regular);
-    img.setAttribute("alt", photo.alt_description);
-    img.setAttribute("title", photo.alt_description);
+    // img.setAttribute("src", photo.urls.regular);
+    // img.setAttribute("alt", photo.alt_description);
+    // img.setAttribute("title", photo.alt_description);
     // put <img> inside <a> then put both Image container element
+    setAttributes(img, {
+      src: photo.urls.regular,
+      alt: photo.alt_description,
+      title: photo.alt_descreiption,
+    });
     item.appendChild(img);
     imageContainer.appendChild(item);
   });
