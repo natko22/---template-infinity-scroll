@@ -6,4 +6,4 @@ A web application that utilizes the Unsplash API to display an infinite scroll o
 ## Demo
 
 
-- [Infinity Scroll][(https://natko22.github.io/---template-picture-in-picture/)](https://natko22.github.io/---template-infinity-scroll/)https://natko22.github.io/---template-infinity-scroll/
+- [Infinity Scroll](https://natko22.github.io/---template-infinity-scroll/)
